@@ -1,0 +1,128 @@
+<div class="container-fluid bg" ng-controller="orderDetail">
+    <div id="background" style="background-image: url(_image/bg.jpg);"></div>
+    <div class="row">
+        <div class="col-6">
+            <div id="orderedImage"><img ng-src="{{orderedImage.image}}" alt="Ordered Image"></div>
+        </div>
+        <div class="col-6">
+            <p id="productDes" ng-model="imageDes">{{ orderedImageDes.product_description }}</p>
+
+            <p id="productPrice" ng-model="price">Price: {{ orderedImageDes.price }}</p> <br/>
+            <p>&nbsp;&nbsp;</p>
+            <br />
+            <p id="shippingChrage" ng-model="shipping"> , {{ orderedImageDes.shipping_details }}</p>
+        </div>
+    </div>
+    <div class="row" id="div1" ng-show="custom">
+        <div class="col-3"></div>
+        <div class="col-6 billingOpt">
+            <form>
+                <fieldset>
+                    <legend>Billing Address</legend>
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name.." ng-model="firstname">
+
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name.." ng-model = "lastname">
+                    <label for="contactnumber">Contact No</label>
+                    <input type="tel" id="contactnumber" name="contactNo" placeholder="Contact Number" ng-model = "contactNo">
+                    <label for="emailid">Email ID</label>
+                    <input type="email" id="emailid" name="emailid" placeholder="Email ID" ng-model = "emailid" ng-model = "emailid">
+                    <label for="mailingadd">Mailing Address</label>
+                    <input type="text" id="mailingadd" name="mailing add" placeholder="Mailing Address" ng-model="mailingadd">
+                    <label for="cityname">City</label>
+                    <input type="text" id="cityname" name="City Name" placeholder="City" style="width: auto;" ng-model="CityName">
+                    <label for="zipcode">Zip Code</label>
+                    <input type="text" id="zipcode" name="Zip code" placeholder="Zip Code" style="width: auto;" ng-model="Zipcode">
+                    <form class="credit-card">
+                        <div class="form-body">
+                            <label for="creditcard">Card Number</label>
+                            <input type="text" name="Card Number" class="card-number" placeholder="Card Number" style="width: auto;">
+                            <!--       Date Field           -->
+                            <!--
+                                <div class="date-field">
+                                    <div class="month">
+-->
+                            <select class="month" name="Month" style="width: auto;">
+          <option value="january">January</option>
+          <option value="february">February</option>
+          <option value="march">March</option>
+          <option value="april">April</option>
+          <option value="may">May</option>
+          <option value="june">June</option>
+          <option value="july">July</option>
+          <option value="august">August</option>
+          <option value="september">September</option>
+          <option value="october">October</option>
+          <option value="november">November</option>
+          <option value="december">December</option>
+        </select>
+
+                            <!--                                </div>-->
+                            <select class="year" name="Year" style="width: auto;">
+          <option value="2016">2016</option>
+          <option value="2017">2017</option>
+          <option value="2018">2018</option>
+          <option value="2019">2019</option>
+          <option value="2020">2020</option>
+          <option value="2021">2021</option>
+          <option value="2022">2022</option>
+          <option value="2023">2023</option>
+          <option value="2024">2024</option>
+        </select>
+                            <div class="card-verification">
+                                <div class="cvv-input">
+                                    <label for="CVV"> CVV </label>
+                                    <input type="text" placeholder="CVV" style="width: auto;">
+                                </div>
+
+                                <div class="cvv-details">
+                                    <p style="width: auto;">3 or 4 digits usually found <br> on the signature strip</p>
+                                </div>
+                                <button align="center" type="submit" class="proceed-btn" ng-click="reviewOrder(custom)"><a>Review Order</a></button>
+                            </div>
+                        </div>
+                    </form>
+
+                </fieldset>
+            </form>
+
+        </div>
+        <div class="col-3"></div>
+
+    </div>
+    +
+    <div class="row" id="div2" ng-hide="custom">
+        <div class="col-2"></div>
+        <div class="col-8 billingOpt" style="margin-top: 20px;">
+            <h3>Preview Order Info</h3>
+            <form class="customer">
+                <label for="fname"> Full Name: </label> <span id="displayFname"> {{ firstname +" "+ lastname }}</span> <br/>
+                <label for="contactnumber"> Contact No: </label> <span id="displaynumber"> {{ contactNo }}</span><br/>
+                <label for="emailid"> Email ID: </label> <span id="displayEmailId">{{ emailid }}</span><br/>
+                <label for="mailingadd"> Mailing Add: </label> <span id="displayAdd">{{ mailingadd+" "+CityName+" "+Zipcode }}</span><br/>
+                <label for="credit card"> Card Information: </label> <span id="creditcard"></span><br/>
+                <!--                    <strong><label for="Total Amount">Total Amount: </label>  <span id="totalAmount"></span> </strong> <br/>-->
+
+                <div class="row">
+                    <div class="col-6 amount" style="text-align: right;">
+                        <span>Price of Guitar: </span><br/>
+                        <span>Total:</span><br />
+                    </div>
+                    <div class="col-6">
+                        <span id="price"ng-model="price">{{ orderedImageDes.price }}</span><br />
+                        
+                        <span id="total"> {{orderedImageDes.price}}</span> <br/>
+
+                    </div>
+                </div>
+
+            </form>
+
+            <button id="placaeOrder" name="Buy" style="float: right;" ng-click="buyGuitar()">Buy</button>
+            <button id="editInfo" name="Edit" style="float: left;" ng-click="editInfo()">Edit</button>
+        </div>
+        <div class="col-2"></div>
+    </div>
+
+</div>

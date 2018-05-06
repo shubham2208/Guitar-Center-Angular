@@ -1,0 +1,30 @@
+<div class="container-fluid" >
+        <div id="background" style="background-image: url(_image/bg.jpg);"></div>
+        <div class="row">
+            <div class="col-6">
+                <div id="orderedImage"><img ng-src="{{orderedImage.image}}" alt="Ordered Image"></div>
+            </div>
+            <div class="col-6">
+                <p id="productDes" ng-model="imageDes">{{orderedImageDes.product_description}}</p>
+
+                <p id="productPrice" ng-model="price" >Price: {{ orderedImageDes.price }}</p> <br/>
+                <p>&nbsp;&nbsp;</p>
+                <br>
+                <p id="shippingChrage" ng-model="shipping">, {{ orderedImageDes.shipping_details }}</p>
+            </div>
+        </div>
+        <div><h2 style="text-align: center; margin: 25px; ">Confirm Your Order</h2></div>
+        <div class="row">
+            
+            <div class="col-2"></div>
+            <div class="col-8">
+            <div id="displayForm"></div>
+            </div>
+            <div class="col-2"></div>
+        
+        </div>
+        <div>
+        <button id="backToHome" style="float: right; margin: 25px; width: 100px; cursor: pointer;"><a href="index.html" ng-click="home()">Home</a></button>
+        </div>
+        
+    </div>

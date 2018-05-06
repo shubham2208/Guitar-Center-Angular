@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app="guitarApplication">
+
+<head>
+    <meta charset="utf-8">
+    <title>Guita Center</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="_style/style.css">
+     <link rel="stylesheet" href="_style/font-awesome.min.css">
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-animate.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+     <script src="_script/ui-bootstrap-tpls-2.5.0.js"></script>
+
+</head>
+
+<body>
+    <div>
+        <header>
+            <h2>Guitar Center</h2>
+            
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#" class="dropbtn">Guitar
+							<div class="dropdown-content">
+								<a href="#"> Electric Guitar</a>
+                        <a href="#">Acoustic Guityar</a>
+                        <a href="#">Bass Guitar</a>
+    </div>
+    </a>
+    </li>
+    <li><a href="#">Bass </a></li>
+    <li><a href="#">Drums </a></li>
+    <li><a href="#">KeyBoards </a></li>
+    <li><a href="#">Contact Us</a></li>
+    <li style="float: right;"><input type="text" name="search" placeholder="Search.." style="background-image: url('_image/search.png');"></li>
+    </ul>
+    </header>
+
+    </div>
+    <div ui-view>
+        
+    </div>
+
+
+    <div class="footer">
+        <footer>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact US</a></li>
+                <li><a href="#">Advertise</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Term of Use</a></li>
+                <li><a href="#">Subscribe</a></li>
+            </ul>
+            <p align="center"> All rights reserved | Design & Created by <a href="#">Nidhi Patel</a></p>
+        </footer>
+    </div>
+   
+    <script type="text/javascript" src="_script/script.js"></script>    
+   
+</body>
+
+</html>
